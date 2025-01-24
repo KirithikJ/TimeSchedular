@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Personal Remainder</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #deb3ce;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: #3a2c3e;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        input, textarea, select {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #deb3ce;
+            border: none;
+            border-radius: 5px;
+            color: #3a2c3e;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Send a Message to Your Future Self</h1>
+        <form action="/submit" method="post">
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
+            
+            <label for="Month">Deliver In (Months):</label><br>
+            <select id="Month" name="Month">
+                <option value="1">1</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select><br>
+
+            <label for="Day">Deliver In (Days):</label><br>
+            <input type="number" id="Day" name="Day" required><br>
+            
+            <button type="submit">Send to the Future!</button>
+        </form>
+    </div>
+</body>
+</html>

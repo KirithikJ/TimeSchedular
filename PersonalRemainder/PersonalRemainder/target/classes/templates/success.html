@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Message Scheduled</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #deb3ce;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: #3a2c3e;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #deb3ce;
+            border: none;
+            border-radius: 5px;
+            color: #3a2c3e;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Message Scheduled!</h1>
+        <p>Your message has been successfully sent to:</p>
+        <p><strong th:text="${email}"></strong></p>
+        <p>Scheduled Delivery Date: <strong th:text="${deliveryDate}"></strong></p>
+        <a href="/"><button>Send Another Message</button></a>
+    </div>
+</body>
+</html>
